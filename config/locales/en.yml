@@ -31,3 +31,36 @@
 
 en:
   hello: "Hello world"
+  english: "English"
+  vietnamese: "Vietnamese"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    contact:
+      contact_title: "Contact"
+      head1: "Contact"
+    home:
+      home_title: "Home"
+      head1: "Home"
+    help:
+      head1: "Help"
+      help_title: "Help"
+  users:
+    title: "Users"
+    editing: "Editing"
+    add: "New"
+    index:
+      show_this_user: "Show user"
+      new_user: "New user"
+      back_to_users: "List Users"
+      edit_user: "Edit user"
+      destroy_user: "Delete user"
+    edit:
+      show_this_user: "Show user"
+      back_to_users: "List Users"
+    new:
+      new_user: "Them nguoi dung moi"
+      back_to_users: "List Users"
+    show:
+      back_to_users: "List Users"
+      edit_user: "Edit user"
+      destroy_user: "Delete user"

@@ -16,9 +16,10 @@ gem "importmap-rails"
 gem "turbo-rails"
 
 gem "stimulus-rails"
+gem "config"
 
 gem "jbuilder"
-
+gem "bcrypt" , "3.1.18"
 # gem "redis", "~> 4.0"
 
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)

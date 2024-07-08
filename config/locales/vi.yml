@@ -1,0 +1,35 @@
+vi:
+  hello: "Chào mừng"
+  english: "Tiếng Anh"
+  vietnamese: "Tiếng Việt"
+  base_title: "Hướng dẫn Ruby On Rails trên Sample App"
+  static_pages:
+    contact:
+      contact_title: "Liên hệ"
+      head1: "Liên hệ"
+    home:
+      home_title: "Trang chủ"
+      head1: "Trang chủ"
+    help:
+      help_title: "Hướng Dẫn"
+      head1: "Hướng dẫn"
+  users:
+    title: "Người dùng"
+    editing: "Chỉnh sửa"
+    add: "Thêm"
+    index:
+      show_this_user: "Xem thông tin người dùng"
+      new_user: "Thêm người dùng mới"
+      back_to_users: "Trở về danh sách người dùng"
+      edit_user: "Chỉnh sửa thông tin"
+      destroy_user: "Xóa người dùng"
+    edit:
+      show_this_user: "Xem thông tin người dùng"
+      back_to_users: "Trở về danh sách người dùng"
+    new:
+      new_user: "Thêm người dùng mới"
+      back_to_users: "Trở về danh sách người dùng"
+    show:
+      back_to_users: "Trở về danh sách người dùng"
+      edit_user: "Chỉnh sửa thông tin"
+      destroy_user: "Xóa người dùng"
