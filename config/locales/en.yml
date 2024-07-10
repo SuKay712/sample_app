@@ -31,3 +31,17 @@
 
 en:
   hello: "Hello world"
+  english: "English"
+  vietnamese: "Vietnamese"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    contact:
+      contact_title: "Contact"
+    home:
+      home_title: "Home"
+    help:
+      help_title: "Help"
+  users:
+    title: "Users"
+    editing: "Editing"
+    add: "New"
