@@ -25,13 +25,20 @@ gem "sassc-rails"
 
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
 
+gem "bootstrap"
+
 gem "bootsnap", require: false
+
+gem "mini_racer", platforms: :ruby
+
+# gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug", platforms: %i(mri mingw x64_mingw)
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
+  gem "pry-rails"
 end
 
 group :development do

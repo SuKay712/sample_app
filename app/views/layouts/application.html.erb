@@ -13,5 +13,10 @@
     <%= link_to t("english"), locale: :en %>
     <%= link_to t("vietnamese"), locale: :vi %>
     <%= yield %>
+    <% flash.each do |message_type, message| %>
+      <div class= "alert alert-<%= message_type %>">
+        <%= message %>
+      </div>
+    <% end %>
   </body>
 </html>

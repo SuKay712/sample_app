@@ -10,8 +10,43 @@ vi:
       home_title: "Trang chủ"
     help:
       help_title: "Hướng Dẫn"
+  sign_up: "Đăng kí"
+  genders: "Nam, Nữ, Khác"
   users:
+    name: "Tên"
+    email: "Email"
+    password: "Mật khẩu"
+    confirmation: "Nhập lại mật khẩu"
     title: "Người dùng"
     editing: "Chỉnh sửa"
     add: "Thêm"
-    birthday_at_least: "phải trong 100 năm"
+    new_user: "Tạo tài khoản"
+    not_found_user: "Không tìm thấy tài khoản"
+    created_at: "Được tạo vào lúc"
+    updated_at: "Cập nhật lúc"
+    birthday: "Ngày sinh"
+    gender: "Giới tính"
+  welcome_to_the_sample_app: "Chào mừng bạn đến với sample app!"
+  shared:
+    error_messages:
+      the_form_contains: "Form này bao gồm"
+  errors:
+    messages:
+      blank: "không được để trống"
+      too_short: "quá ngắn"
+      invalid: "không hợp lệ"
+      too_long: "quá dài"
+  activerecord:
+    attributes:
+      user:
+        password: "Mật khẩu"
+        name: "Tên"
+        birthday: "Ngày sinh"
+        gender: "Giới tính"
+        password_confirmation: "Mật khẩu nhập lại"
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              birthday_at_least: "phải trong vòng 100 năm qua"
