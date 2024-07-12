@@ -1,12 +1,9 @@
 @import 'bootstrap';
+@import 'var';
 @mixin box-sizing {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-:root {
-  --border-color: #bbb;
-  --h2-color: #777;
 }
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -22,7 +19,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: var(--h2-color);
+  color: $h2-color;
 }
 p {
   font-size: 1.1em;
@@ -62,7 +59,7 @@ aside {
 }
 /*forms */
 input, textarea, select, .uneditable-input {
-  border: 1px solid var(--border-color);
+  border: 1px solid $border-color;
   width: 100%;
   margin-bottom: 15px;
   font-size: 1.1em;
@@ -82,4 +79,13 @@ input {
 }
 .dropdown-menu.active {
   display: block;
+}
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-color;
+  }
 }

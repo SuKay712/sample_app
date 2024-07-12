@@ -29,6 +29,10 @@ gem "bootstrap"
 
 gem "bootsnap", require: false
 
+gem "faker", "2.21.0"
+
+gem "pagy"
+
 gem "mini_racer", platforms: :ruby
 
 group :development, :test do

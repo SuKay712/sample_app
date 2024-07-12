@@ -3,6 +3,8 @@ en:
     formats:
       default: "%H:%M %d %B, %Y "
   hello: "Hello world"
+  click_to_activate: "Welcome to the Sample App!
+                    Click on the link below to activate your account:"
   english: "English"
   vietnamese: "Vietnamese"
   base_title: "Ruby on Rails Tutorial Sample App"
@@ -15,6 +17,7 @@ en:
   log_in: "Log in"
   log_out: "Log out"
   genders: "Male, Female, Other"
+  save: "Save"
   users:
     account: "Account"
     name: "Name"
@@ -23,6 +26,7 @@ en:
     confirmation: "Confirmation"
     editing: "Editing"
     profile: "Profile"
+    all: "All users"
     add: "New"
     not_found_user: "Not found user"
     new_user: "New user"
@@ -33,15 +37,31 @@ en:
   shared:
     error_messages:
       the_form_contains: "The form contain"
+  activate: "Activate"
+  account_activation: "Activate account"
   welcome_to_the_sample_app: "Welcome to sample app!"
-
+  update_successfully: "Update successfully"
+  delete_successfully: "Delete successfully"
+  delete_fail: "Delete Fail"
+  invalid_email_password_combination: "Wrong password or email"
+  you_sure?: "You sure?"
+  change: "Change"
+  check_email: "Please check your email to activate your account."
+  account_activated: "Account activated"
+  invalid_activation_link: "Invalid activation link"
   errors:
     messages:
       blank: "cannot be blank"
       too_short: "too short"
       too_long: "too long"
       invalid: "invalid"
-    sign_up: "Register unsucessfully"
+    sign_up: "Register unsuccessfully"
+    update: "Update unsuccessfully"
+    dont_have_permission: "You don't have permission"
+    not_found: "Not Found"
+    please_log_in: "Please login"
+    account_not_activated: "Account has not been activated, please check your email"
+    you_are_not_admin: "You are not admin"
   activerecord:
     attributes:
       user:
