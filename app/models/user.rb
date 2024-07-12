@@ -12,19 +12,39 @@ class User < ApplicationRecord
   validates :gender, presence: true
   validates :birthday, presence: true
   validate :birthday_must_be_in_last_100_years, if: -> {birthday.present?}
-  validates :gender, presence: true
-  validates :birthday, presence: true
-  validate :birthday_must_be_in_last_100_years, if: -> {birthday.present?}
 
   has_secure_password
 
-  def User.digest string
-    cost =  if ActiveModel::SecurePassword::min_cost
-              BCrypt::Engine::MIN_COST
-            else
-              BCrypt::Engine::cost
-            end
-    BCrypt::Password.create string, cost: cost
+  attr_accessor :remember_token
+
+  class << self
+    def digest string
+      cost =  if ActiveModel::SecurePassword::min_cost
+                BCrypt::Engine::MIN_COST
+              else
+                BCrypt::Engine::cost
+              end
+      BCrypt::Password.create string, cost: cost
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
+
+  def remember
+    self.remember_token = User.new_token
+    update_column :password_digest, User.digest(remember_token)
+  end
+
+  def forget
+    update_column :password_digest, nil
+  end
+
+  def authenticate? remember_token
+    return false unless remember_token
+
+    BCrypt::Password.new(password_digest).is_password? remember_token
   end
 
   private

@@ -20,4 +20,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_10_141938) do
     t.date "birthday"
     t.string "gender"
   end
+
 end
