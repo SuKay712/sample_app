@@ -9,21 +9,25 @@ vi:
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
   base_title: "Hướng dẫn Ruby On Rails trên Sample App"
-  static_pages:
-    contact:
-      contact_title: "Liên hệ"
-    home:
-      home_title: "Trang chủ"
-    help:
-      help_title: "Hướng Dẫn"
+  setting: "Cài đặt"
+  title:
+    contact_title: "Liên hệ"
+    home_title: "Trang chủ"
+    help_title: "Hướng Dẫn"
   sign_up: "Đăng kí"
+  sign_up_now: "Đăng kí ngay"
+  log_in: "Đăng nhập"
+  log_out: "Đăng xuất"
   genders: "Nam, Nữ, Khác"
   users:
+    account: "Tài khoản"
     name: "Tên"
     email: "Email"
+    profile: "Thông tin người dùng"
     password: "Mật khẩu"
     confirmation: "Nhập lại mật khẩu"
     title: "Người dùng"
+    new_user?: "Chưa có tài khoản?"
     editing: "Chỉnh sửa"
     add: "Thêm"
     new_user: "Tạo tài khoản"
@@ -44,6 +48,7 @@ vi:
       too_long: "quá dài"
       confirmation: "sai"
     sign_up: "Đăng kí không thành công"
+    invalid_email_password_combination: "Mật khẩu hoặc email sai"
   activerecord:
     attributes:
       user:

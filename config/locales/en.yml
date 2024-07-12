@@ -6,21 +6,23 @@ en:
   english: "English"
   vietnamese: "Vietnamese"
   base_title: "Ruby on Rails Tutorial Sample App"
-  static_pages:
-    contact:
-      contact_title: "Contact"
-    home:
-      home_title: "Home"
-    help:
-      help_title: "Help"
+  setting: "Setting"
+  title:
+    contact_title: "Contact"
+    home_title: "Home"
+    help_title: "Help"
   sign_up: "Sign up"
+  log_in: "Log in"
+  log_out: "Log out"
   genders: "Male, Female, Other"
   users:
+    account: "Account"
     name: "Name"
     email: "Email"
     password: "Password"
     confirmation: "Confirmation"
     editing: "Editing"
+    profile: "Profile"
     add: "New"
     not_found_user: "Not found user"
     new_user: "New user"
