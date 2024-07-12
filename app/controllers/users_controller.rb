@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @pagy, @users = pagy(User.sort_by_name, Settings.page_size)
   end
 
-  def show; end
+  def show
+    @pagy, @microposts = pagy @user.microposts.sort_by_date_desc, items: Settings.page_size
+  end
 
   def new
     @user = User.new
@@ -51,14 +53,6 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit User::PERMITTED_ATTRIBUTES
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "errors.please_log_in"
-    redirect_to login_url, status: :see_other
   end
 
   def load_user

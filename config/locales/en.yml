@@ -38,10 +38,12 @@ en:
   shared:
     error_messages:
       the_form_contains: "The form contain"
+  delete: "Delete"
   activate: "Activate"
   account_activation: "Activate account"
   password_reset: "Reset password"
   welcome_to_the_sample_app: "Welcome to sample app!"
+  create_sucessfully: "Create sucessfully"
   update_successfully: "Update successfully"
   delete_successfully: "Delete successfully"
   delete_fail: "Delete Fail"
@@ -85,3 +87,11 @@ en:
               birthday_at_least: "must be within the last 100 years"
             password:
               password_empty: "Password is empty"
+  alert:
+    image_limit_data: "Exceeded the amount of data allowed"
+  image:
+    image_invalid_format: "Wrong file format"
+    image_maximum_size: ! "Less than %{size} MB"
+  compose: "Compose new micropost..."
+  post: "Post"
+  feed: "Feed"

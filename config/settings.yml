@@ -7,3 +7,7 @@ avatar_default_size: 80
 avatar_size: 50
 page_size: 10
 token_expire_time: 2
+micropost_content_length: 500
+image_format: ["image/jpeg", "image/gif", "image/png"]
+max_image_data: 5
+digit_300: 300

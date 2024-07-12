@@ -35,7 +35,13 @@ gem "pagy"
 
 gem "figaro"
 
+gem "image_processing"
+
 gem "mini_racer", platforms: :ruby
+
+gem "active_storage_validations"
+
+gem "i18n-js", "3.8.0"
 
 group :development, :test do
   gem "debug", platforms: %i(mri mingw x64_mingw)

@@ -41,10 +41,12 @@ vi:
     birthday: "Ngày sinh"
     gender: "Giới tính"
     update: "Cập nhật"
+  delete: "Xóa"
   account_activation: "Kích hoạt tài khoản"
   activate: "Kích hoạt"
   forgot_password: "Quên mật khẩu"
   welcome_to_the_sample_app: "Chào mừng bạn đến với sample app!"
+  create_successfully: "Tạo thành công"
   update_successfully: "Cập nhật thành công"
   delete_successfully: "Xóa thành công"
   delete_fail: "Xóa thất bại"
@@ -92,3 +94,11 @@ vi:
               birthday_at_least: "phải trong vòng 100 năm qua"
             password:
               password_empty: "Mật khẩu trống"
+  alert:
+    image_limit_data: "Quá số lượng data cho phép"
+  image:
+    image_invalid_format: "Sai định dạng file"
+    image_maximum_size: ! "Ít hơn %{size} MB"
+  compose: "Nội dung bài..."
+  post: "Đăng bài"
+  feed: "Tin"
