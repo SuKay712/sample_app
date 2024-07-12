@@ -68,11 +68,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {host: host}
 
   config.action_mailer.smtp_settings = {
-    address: Figaro.env.ADDRESS,
+    address: Figaro.env.SMTP_ADDRESS,
     user_name: Figaro.env.USER_EMAIL,
     password: Figaro.env.USER_PASSWORD,
-    port: Figaro.env.PORT,
-    enable_starttls_auto: Figaro.env.STARTTLS_AUTO,
-    authentication: Figaro.env.AUTHENTICATION,
+    port: Figaro.env.SMTP_PORT,
+    authentication: Figaro.env.SMTP_AUTHENTICATION,
   }
 end

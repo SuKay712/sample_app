@@ -6,3 +6,4 @@ name_length : 30
 avatar_default_size: 80
 avatar_size: 50
 page_size: 10
+token_expire_time: 2
