@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      default: "%H:%M %d %B, %Y "
   hello: "Hello world"
   english: "English"
   vietnamese: "Vietnamese"
@@ -10,8 +13,43 @@ en:
       home_title: "Home"
     help:
       help_title: "Help"
+  sign_up: "Sign up"
+  genders: "Male, Female, Other"
   users:
-    title: "Users"
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    confirmation: "Confirmation"
     editing: "Editing"
     add: "New"
-    birthday_at_least: "must be in the last 100 years"
+    not_found_user: "Not found user"
+    new_user: "New user"
+    created_at: ! "Created at %{date}"
+    updated_at: ! "Updated at %{date}"
+    birthday: "Birthday"
+    gender: "Gender"
+  shared:
+    error_messages:
+      the_form_contains: "The form contain"
+  welcome_to_the_sample_app: "Welcome to sample app!"
+
+  errors:
+    messages:
+      blank: "cannot be blank"
+      too_short: "too short"
+      too_long: "too long"
+      invalid: "invalid"
+    sign_up: "Register unsucessfully"
+  activerecord:
+    attributes:
+      user:
+        password: "Password"
+        name: "Name"
+        birthday: "Birthday"
+        gender: "Gender"
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              birthday_at_least: "must be within the last 100 years"
