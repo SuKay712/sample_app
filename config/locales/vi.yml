@@ -47,6 +47,7 @@ vi:
   welcome_to_the_sample_app: "Chào mừng bạn đến với sample app!"
   update_successfully: "Cập nhật thành công"
   delete_successfully: "Xóa thành công"
+  delete_fail: "Xóa thất bại"
   you_sure?: "Bạn chắc chưa?"
   change: "Thay đổi"
   account_activated: "Tài khoản đã được kích hoạt"

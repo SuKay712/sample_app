@@ -60,12 +60,19 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.pry_debugger = true
-  # Raises error for missing translations.
-  # config.i18n.raise_on_missing_translations = true
 
-  # Annotate rendered view with file names.
-  # config.action_view.annotate_rendered_view_with_filenames = true
 
-  # Uncomment if you wish to allow Action Cable access from any origin.
-  # config.action_cable.disable_request_forgery_protection = true
+  host = Figaro.env.HOST
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = {host: host}
+
+  config.action_mailer.smtp_settings = {
+    address: Figaro.env.ADDRESS,
+    user_name: Figaro.env.USER_EMAIL,
+    password: Figaro.env.USER_PASSWORD,
+    port: Figaro.env.PORT,
+    enable_starttls_auto: Figaro.env.STARTTLS_AUTO,
+    authentication: Figaro.env.AUTHENTICATION,
+  }
 end
