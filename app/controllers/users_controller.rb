@@ -18,8 +18,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = t "welcome_to_the_sample_app"
-      redirect_to @user, status: :see_other
+      @user.send_activation_email
+      flash[:info] = t "check_email"
+      redirect_to root_url, status: :see_other
     else
       flash[:danger] = t "errors.sign_up"
       render :new, status: :unprocessable_entity
@@ -80,4 +81,5 @@ class UsersController < ApplicationController
 
     flash[:danger] = t "errors.you_are_not_admin"
     redirect_to root_url, status: :see_other
+  end
 end

@@ -2,7 +2,7 @@ class User < ApplicationRecord
 
   PERMITTED_ATTRIBUTES = %i(name email password password_confirmation birthday gender)
   before_save :downcase_email
-
+  before_create :create_activation_digest
   validates :password, presence: true, length: {minimum: Settings.password_length}
   validates :name, presence: true, length: {maximum: Settings.name_length}
   validates :email, presence: true,
@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
 
   class << self
     def digest string
@@ -44,12 +44,20 @@ class User < ApplicationRecord
     update_column :remember_digest, nil
   end
 
-  def authenticate? remember_token
-    return false unless remember_token
+  def authenticate? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
 
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+    BCrypt::Password.new(digest).is_password? token
   end
 
+  def activate
+    update_columns activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailMailer.account_activation(self).deliver_now
+  end
   private
 
   def downcase_email
@@ -60,5 +68,10 @@ class User < ApplicationRecord
     if birthday < 100.years.ago.to_date
       errors.add :birthday, :birthday_at_least
     end
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 end
