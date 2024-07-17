@@ -2,4 +2,7 @@ mail_regex : !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 password_length : 6
 email_length_min : 20
 email_length_max : 255
-name_length : 10
+name_length : 30
+avatar_default_size: 80
+avatar_size: 50
+page_size: 10

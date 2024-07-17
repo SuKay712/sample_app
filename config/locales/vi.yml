@@ -5,6 +5,8 @@ vi:
   date:
     month_names:
       [nil, Tháng 1, Tháng 2, Tháng 3, Tháng 4, Tháng 5, Tháng 6, Tháng 7, Tháng 8, Tháng 9, Tháng 10, Tháng 11, Tháng 12]
+  click_to_activate: "Chào mừng bạn đến với Sample app.
+                    Hãy nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
   hello: "Chào mừng"
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
@@ -18,6 +20,7 @@ vi:
   sign_up_now: "Đăng kí ngay"
   log_in: "Đăng nhập"
   log_out: "Đăng xuất"
+  save: "Lưu"
   genders: "Nam, Nữ, Khác"
   users:
     account: "Tài khoản"
@@ -27,6 +30,7 @@ vi:
     password: "Mật khẩu"
     confirmation: "Nhập lại mật khẩu"
     title: "Người dùng"
+    all: "Tất cả người dùng"
     new_user?: "Chưa có tài khoản?"
     editing: "Chỉnh sửa"
     add: "Thêm"
@@ -36,7 +40,18 @@ vi:
     updated_at: ! "Cập nhật lúc: %{date}"
     birthday: "Ngày sinh"
     gender: "Giới tính"
+  account_activation: "Kích hoạt tài khoản"
+  password_reset: "Đặt lại mật khẩu"
+  activate: "Kích hoạt"
+  forgot_password: "Quên mật khẩu?"
   welcome_to_the_sample_app: "Chào mừng bạn đến với sample app!"
+  update_successfully: "Cập nhật thành công"
+  delete_successfully: "Xóa thành công"
+  you_sure?: "Bạn chắc chưa?"
+  change: "Thay đổi"
+  account_activated: "Tài khoản đã được kích hoạt"
+  check_email: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
+  invalid_activation_link: "Liên kết kích hoạt không hợp lệ"
   shared:
     error_messages:
       the_form_contains: "Form này bao gồm"
@@ -48,7 +63,13 @@ vi:
       too_long: "quá dài"
       confirmation: "sai"
     sign_up: "Đăng kí không thành công"
+    update: "Cập nhật thất bại"
+    dont_have_permission: "Bạn không có quyền"
+    please_log_in: "Vui lòng đăng nhập"
     invalid_email_password_combination: "Mật khẩu hoặc email sai"
+    not_found: "Không tìm thấy"
+    account_not_activated: "Tài khoản chưa được kích hoạt, vui lòng kiểm tra email"
+    you_are_not_admin: "Bạn không phải admin"
   activerecord:
     attributes:
       user:

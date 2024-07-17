@@ -6,12 +6,15 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: Settings.password_length}
   validates :name, presence: true, length: {maximum: Settings.name_length}
   validates :email, presence: true,
-    length: {minimum: Settings.email_length_min, maximum: Settings.email_length_max},
+    length: {minimum: Settings.email_length_min,
+            maximum: Settings.email_length_max},
     format: {with: Settings.mail_regex},
     uniqueness: {case_sensitive: false, scope: :id}
   validates :gender, presence: true
   validates :birthday, presence: true
-  validate :birthday_must_be_in_last_100_years, if: -> {birthday.present?}
+  validate :birthday_must_be_in_last_100_years, if: ->{birthday.present?}
+
+  scope :sort_by_name, ->{order(:name)}
 
   has_secure_password
 
@@ -34,17 +37,17 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update_column :password_digest, User.digest(remember_token)
+    update_column :remember_digest, User.digest(remember_token)
   end
 
   def forget
-    update_column :password_digest, nil
+    update_column :remember_digest, nil
   end
 
   def authenticate? remember_token
     return false unless remember_token
 
-    BCrypt::Password.new(password_digest).is_password? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
   end
 
   private
