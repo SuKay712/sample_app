@@ -40,10 +40,10 @@ vi:
     updated_at: ! "Cập nhật lúc: %{date}"
     birthday: "Ngày sinh"
     gender: "Giới tính"
+    update: "Cập nhật"
   account_activation: "Kích hoạt tài khoản"
-  password_reset: "Đặt lại mật khẩu"
   activate: "Kích hoạt"
-  forgot_password: "Quên mật khẩu?"
+  forgot_password: "Quên mật khẩu"
   welcome_to_the_sample_app: "Chào mừng bạn đến với sample app!"
   update_successfully: "Cập nhật thành công"
   delete_successfully: "Xóa thành công"
@@ -53,6 +53,9 @@ vi:
   account_activated: "Tài khoản đã được kích hoạt"
   check_email: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
   invalid_activation_link: "Liên kết kích hoạt không hợp lệ"
+  email_has_been_sent: "Email đã được gửi kèm theo hướng dẫn"
+  email_not_found: "Không tìm thấy email"
+  reset_password: "Đặt lại mật khẩu"
   shared:
     error_messages:
       the_form_contains: "Form này bao gồm"
@@ -63,6 +66,7 @@ vi:
       invalid: "không hợp lệ"
       too_long: "quá dài"
       confirmation: "sai"
+    expired: "Liên kết đã hết hạn"
     sign_up: "Đăng kí không thành công"
     update: "Cập nhật thất bại"
     dont_have_permission: "Bạn không có quyền"
@@ -71,6 +75,7 @@ vi:
     not_found: "Không tìm thấy"
     account_not_activated: "Tài khoản chưa được kích hoạt, vui lòng kiểm tra email"
     you_are_not_admin: "Bạn không phải admin"
+    user_is_inactived: "Người dùng chưa được kích hoạt"
   activerecord:
     attributes:
       user:
@@ -85,3 +90,5 @@ vi:
           attributes:
             birthday:
               birthday_at_least: "phải trong vòng 100 năm qua"
+            password:
+              password_empty: "Mật khẩu trống"
