@@ -61,6 +61,8 @@ Rails.application.configure do
 
   config.pry_debugger = true
 
+  config.middleware.use I18n::JS::Middleware
+
 
   host = Figaro.env.HOST
   config.action_mailer.raise_delivery_errors = false

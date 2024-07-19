@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
 
   PERMITTED_ATTRIBUTES = %i(name email password password_confirmation birthday gender)
   before_save :downcase_email
@@ -14,7 +15,7 @@ class User < ApplicationRecord
   validates :birthday, presence: true
   validate :birthday_must_be_in_last_100_years, if: ->{birthday.present?}
 
-  scope :sort_by_name, ->{order(:name)}
+  scope :sort_by_name, ->{ order(:name) }
 
   has_secure_password
 
@@ -70,6 +71,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.token_expire_time.hours.ago
+  end
+
+  def feed
+    microposts
   end
   private
 
