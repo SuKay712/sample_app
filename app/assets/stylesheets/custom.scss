@@ -71,9 +71,9 @@ input {
 }
 
 #error_explanation {
-  color: red;
+  color: $red-color;
   ul {
-    color: red;
+    color: $red-color;
     margin: 0 0 30px;
   }
 }
@@ -94,7 +94,7 @@ input {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $border-top-color;
   }
   .user {
     margin-top: 5em;
@@ -124,7 +124,6 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
-
   }
 }
 span.image {
@@ -132,4 +131,39 @@ span.image {
   input {
     border: 0;
   }
+}
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 20;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-color;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue-color;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+.users.follow {
+  padding: 0;
 }

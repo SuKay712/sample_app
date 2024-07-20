@@ -17,6 +17,7 @@
 <p><%= t("users.created_at", date: l(@user.created_at)) %></p>
 <p><%= t("users.updated_at", date: l(@user.updated_at)) %></p>
 <div class="col-md-8">
+  <%= render "follow_form" if logged_in? %>
   <% if @user.microposts.any? %>
     <ol class="microposts">
       <%= render @microposts %>

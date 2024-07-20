@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy(User.sort_by_name, Settings.page_size)
+    @pagy, @users = pagy(User.sort_by_name, items: Settings.page_size)
   end
 
   def show
@@ -49,6 +49,19 @@ class UsersController < ApplicationController
     end
     redirect_to users_path
   end
+
+  def following
+    @title = t "following"
+    @pagy, @users = pagy @user.following, items: Settings.page_size
+    render :show_follow
+  end
+
+  def followers
+    @title = t "follower"
+    @pagy, @users = pagy @user.followers, items: Settings.page_size
+    render :show_follow
+  end
+
 
   private
   def user_params

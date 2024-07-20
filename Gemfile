@@ -45,10 +45,10 @@ gem "i18n-js", "3.8.0"
 
 group :development, :test do
   gem "debug", platforms: %i(mri mingw x64_mingw)
+  gem "pry-rails"
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
-  gem "pry-rails"
 end
 
 group :development do

@@ -38,7 +38,12 @@ en:
   shared:
     error_messages:
       the_form_contains: "The form contain"
+  following: "Following"
+  follower: "Follower"
+  follow: "Follow"
+  unfollow: "Unfollow"
   delete: "Delete"
+  micropost: "Micropost"
   activate: "Activate"
   account_activation: "Activate account"
   password_reset: "Reset password"
